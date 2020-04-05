@@ -1,7 +1,12 @@
 import React from 'react'
+import Add from '../../components/Add/Add'
+import Title from '../../components/Title/Title'
 
 const AddView = () => (
-  <h1>Widokdodawania nowego produktu </h1>
+  <>
+  <Title children={'Add new item to list'} />
+  <Add />
+  </>
 )
 
 export default AddView

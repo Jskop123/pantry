@@ -1,7 +1,24 @@
 import React from 'react'
+import AppContext from '../../context'
+
+import Edit from '../../components/Edit/Edit'
+import Title from '../../components/Title/Title'
 
 const EditView = () => (
-  <h1>#2Widok edycji danego produktu dodanego do listy:</h1>
+  <>
+  <Title children={'Edit product'} />
+  <ul>
+  <AppContext.Consumer>
+      {(context) => (
+        <ul>
+        {context.list.map(product => (
+          <Edit key={product.name} onDelete={context.deleteListItem} onNameEdit={context.editNameHandler} onCountEdit={context.editCountHandler} {...product}/>
+        ))}
+        </ul>
+      )}
+    </AppContext.Consumer>
+  </ul>
+  </>
 )
 
 export default EditView

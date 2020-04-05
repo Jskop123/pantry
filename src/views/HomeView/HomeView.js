@@ -1,18 +1,13 @@
 import React from 'react'
 import AppContext from '../../context'
 
-import Product from '../../components/Product/Product'
+import Products from '../../components/Product/Products'
 
 const HomeView = () => (
   <ul>
     <AppContext.Consumer>
       {(context) => (
-        <Product 
-          products = {context.list}
-          onDelete = {context.deleteListItem}
-        />
-          
-        //console.log(context.list[0])
+        <Products products={context.list} onDelete={context.deleteListItem} />
       )}
     </AppContext.Consumer>
   </ul>

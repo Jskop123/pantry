@@ -1,20 +1,26 @@
 .wrapper {
-  display: flex;
   width: 50%;
+  list-style: none;
   margin: 2% auto;
-  justify-content: center;
+  display: flex;
   align-items: baseline;
 }
-.wrapper h1{
-  margin: 0 30% 0 2%;
-  color: blue;
+.wrapper label {
+  font-size: 1.2em;
 }
-.wrapper button {
+
+.wrapper input[type=text] {
+  font-size: 1.2em;
+  margin: 0 5% 0 1%;
+  text-align: center;
+}
+
+.wrapper input[type=submit] {
   border: none;
   padding: .5rem 2rem;
   margin: 0;
   text-decoration: none;
-  background: red;
+  background: blue;
   color: #ffffff;
   font-size: 1rem;
   cursor: pointer;

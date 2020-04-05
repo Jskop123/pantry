@@ -1,9 +1,26 @@
 import React from 'react'
+import AppContext from '../../context'
+
+import List from '../../components/List/List'
+import Title from '../../components/Title/Title'
 
 const ListView = () => (
-  <h1>Widoklisty zakupów</h1>
-)
+  <>
+    <AppContext.Consumer>
+      {(context) => (
+        <>
+        <Title children={`Shopping list with products less than ${context.limit} pieces.`}/>
+        <ul>
+        {context.list.map(product => (
+          (product.count <= context.limit) ? <List key={product.name} {...product}/> : null
+        ))}
+      </ul>
+      </>
+      )}
+    </AppContext.Consumer>
+  </>
 
+)
 export default ListView
 
 /*

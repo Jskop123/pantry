@@ -1,0 +1,12 @@
+
+.wrapper {
+  display: flex;
+  width: 50%;
+  margin: 2% auto;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.wrapper h1{
+  margin: 0 30% 0 2%;
+  color: blue;
+}
